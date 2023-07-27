@@ -1,24 +1,12 @@
-# README
+This is a super basic app based on Twitter to illustrate Hotwire core concepts.
+On one side, we have the list of Tweets, and on the other, a form to create a tweet. Upon creation, the list of tweets gets updated. Also, tweets can be edited in-place and removed.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Usage
+```
+=> git clone https://github.com/bgvo/hotwire-demo.git
+=> cd hotwire-demo
+=> rails db:setup
+=> foreman start -f Procfile.dev
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Go to localhost:3000
+```

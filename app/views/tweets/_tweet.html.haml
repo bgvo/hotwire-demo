@@ -1,7 +1,9 @@
 = turbo_frame_tag dom_id(tweet) do
   .row
-  %p.my-5
-    = tweet.content
+    .mt-5
+      Created on #{tweet.created_at.strftime("%B %d, %Y")}
+    %p.my-5.border.border-gray-200.py-3.px-5.rounded-lg
+      = tweet.content
   .row
     = link_to fa_icon("edit"), edit_tweet_path(tweet)
     // IMPORTANT: we need to add turbo_method: :delete to the link_to helper

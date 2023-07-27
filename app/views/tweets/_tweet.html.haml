@@ -3,6 +3,6 @@
   %p.my-5
     = tweet.content
   .row
-    = link_to 'Edit', edit_tweet_path(tweet), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    = link_to fa_icon("edit"), edit_tweet_path(tweet)
     // IMPORTANT: we need to add turbo_method: :delete to the link_to helper
-    = link_to 'Delete', tweet, data: { turbo_method: :delete }, class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    = link_to fa_icon("trash"), tweet, data: { turbo_method: :delete }

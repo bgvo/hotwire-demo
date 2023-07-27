@@ -1,10 +1,7 @@
-.col-4
+.flex.flex-row
   - if notice.present?
     %p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block= notice
-  .flex.justify-between.items-center
+  %div{class: "basis-1/4"}
     %h1.font-bold.text-4xl Tweets
-    = link_to 'New tweet', new_tweet_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
-  #tweets.min-w-full
     = render @tweets
-.col-4
-  = render template: 'tweets/edit', locals: { tweet: @tweet }
+  = render template: 'tweets/new', locals: { tweet: @tweet }

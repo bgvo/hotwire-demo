@@ -1,10 +1,10 @@
 = turbo_frame_tag dom_id(tweet) do
-  .row
-    .mt-5
+  .border.border-gray-200.p-3.rounded-lg.my-5
+    .row
       Created on #{tweet.created_at.strftime("%B %d, %Y")}
-    %p.my-5.border.border-gray-200.py-3.px-5.rounded-lg
-      = tweet.content
-  .row
-    = link_to fa_icon("edit"), edit_tweet_path(tweet)
-    // IMPORTANT: we need to add turbo_method: :delete to the link_to helper
-    = link_to fa_icon("trash"), tweet, data: { turbo_method: :delete }
+      %p.my-5.bg-gray-100.px-3.py-2.rounded-lg
+        = tweet.content
+    .row
+      = link_to fa_icon("edit"), edit_tweet_path(tweet)
+      // IMPORTANT: we need to add turbo_method: :delete to the link_to helper
+      = link_to fa_icon("trash"), tweet, data: { turbo_method: :delete }
